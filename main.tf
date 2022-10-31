@@ -184,7 +184,7 @@ resource "aws_instance" "Ec2" {
     subnet_id = aws_subnet.pubsub.id
     vpc_security_group_ids = ["sg-0157d819988cc1bdf"]
     tags = {
-        Name ="linux1 Ec2"
+        Name ="linux Machine1"
     }
 }
 resource "aws_instance" "Ec21" {
@@ -194,6 +194,6 @@ resource "aws_instance" "Ec21" {
     subnet_id = aws_subnet.prisub.id
     vpc_security_group_ids = ["sg-09af9c8b3a79e0f41"]
     tags = {
-        Name ="linux2 Ec2"
+        Name ="linux Machine2"
     }
 }
