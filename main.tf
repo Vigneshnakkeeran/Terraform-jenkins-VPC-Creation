@@ -177,7 +177,7 @@ resource "aws_security_group" "allow_tls" {
   }
 }
 #Creating EC2 Instace
-resource "aws_instance" "Machine1" {
+resource "aws_instance" "EC2" {
     ami = "ami-026b57f3c383c2eec" #us-east-1
     instance_type ="t2.micro"
     key_name = "oct18"
@@ -187,7 +187,7 @@ resource "aws_instance" "Machine1" {
         Name ="linux Machine1"
     }
 }
-resource "aws_instance" "Machine2" {
+resource "aws_instance" "EC21" {
     ami = "ami-026b57f3c383c2eec" #us-east-1
     instance_type ="t2.micro"
     key_name = "oct18"
