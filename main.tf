@@ -176,3 +176,24 @@ resource "aws_security_group" "allow_tls" {
     Name = "my_private_security"
   }
 }
+#Creating EC2 Instace
+resource "aws_instance" "Ec2" {
+    ami = "ami-026b57f3c383c2eec" #us-east-1
+    instance_type ="t2.micro"
+    key_name = "oct18"
+    subnet_id = aws_subnet.pubsub.id
+    vpc_security_group_ids = ["sg-0157d819988cc1bdf"]
+    tags = {
+        Name ="linux1 Ec2"
+    }
+}
+resource "aws_instance" "Ec21" {
+    ami = "ami-026b57f3c383c2eec" #us-east-1
+    instance_type ="t2.micro"
+    key_name = "oct18"
+    subnet_id = aws_subnet.prisub.id
+    vpc_security_group_ids = ["sg-09af9c8b3a79e0f41"]
+    tags = {
+        Name ="linux2 Ec2"
+    }
+}
